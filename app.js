@@ -6,6 +6,11 @@ const logger = require("morgan");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const indexRouter = require("./routes/index");
+const step3Router = require("./routes/step3");
+
+// const auth = require("firebase/auth");
+// const firestore = require("firebase/firestore");
+// const todoItemRouter = require("./routes/todo")
 
 const app = express();
 
@@ -28,6 +33,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/api", indexRouter);
+app.use("/api", step3Router);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -3,19 +3,26 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "supervisor ./bin/www"
+    "dev": "supervisor ./bin/www",
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "connect-livereload": "^0.6.1",
     "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "firebase": "^7.15.5",
+    "firebase-admin": "^8.12.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "livereload": "^0.9.1",
     "morgan": "~1.9.1",
     "shortid": "^2.2.15",
-    "cors": "^2.8.5",
     "uuid4": "^2.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.3.1",
+    "prettier": "^2.0.5"
   }
 }
